@@ -1,15 +1,13 @@
 # If you come from bash you might have to change your $PATH.
-export CUDA_PATH=/Developer/NVIDIA/CUDA-9.2
-export PATH=$HOME/.cargo/bin:$HOME/bin:/usr/local/bin:$CUDA_PATH/bin:$PATH
-alias py36="source activate py36"
+export PATH=$HOME/.cargo/bin:$HOME/bin:/usr/local/bin:$PATH
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/edwardchor/.oh-my-zsh"
+export ZSH="${HOME}/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="ys"
+ZSH_THEME="spaceship"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -63,7 +61,7 @@ ZSH_THEME="ys"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-. /Users/edwardchor/.oh-my-zsh/plugins/z/z.sh
+. ${HOME}/.oh-my-zsh/plugins/z/z.sh
 plugins=(
   git
   osx
@@ -129,8 +127,5 @@ tmux_init()
 alias zshconfig="mate ~/.zshrc"
 alias ohmyzsh="mate ~/.oh-my-zsh"
 alias brewup="brew update;brew upgrade;brew doctor"
-alias run_aria_backend="aria2c --enable-rpc --rpc-listen-all"
-alias run_aria_frontend="cd ~/Base/Laboratory/webui-aria2;node node-server.js"
-eval $(thefuck --alias)
 export PATH="/usr/local/sbin:$PATH"
 source /Users/edwardchor/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
